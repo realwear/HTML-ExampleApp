@@ -77,24 +77,16 @@ public class WearWebView extends WebView {
 
         @Override
         public boolean finishComposingText() {
-
             if(mCloseKeyboard){
                 mCloseKeyboard = false;
-                Handler mainHandler = new Handler(Looper.getMainLooper());
-
-                Runnable myRunnable = () -> WearWebView.this.clearFocus();
-                mainHandler.post(myRunnable);
+                handleKeyboardEvent();
             }
             return super.finishComposingText();
         }
 
         @Override
         public boolean performEditorAction(int editorAction) {
-            Handler mainHandler = new Handler(Looper.getMainLooper());
-
-            Runnable myRunnable = () -> WearWebView.this.clearFocus();
-            mainHandler.post(myRunnable);
-
+            handleKeyboardEvent();
             return super.performEditorAction(editorAction);
         }
 
@@ -103,13 +95,20 @@ public class WearWebView extends WebView {
             int keyCode = event.getKeyCode();
 
             if(keyCode == KeyEvent.KEYCODE_ENTER){
-                Handler mainHandler = new Handler(Looper.getMainLooper());
-
-                Runnable myRunnable = () -> WearWebView.this.clearFocus();
-                mainHandler.post(myRunnable);
+                handleKeyboardEvent();
             }
-
             return super.sendKeyEvent(event);
+        }
+
+        private void handleKeyboardEvent(){
+            Handler mainHandler = new Handler(Looper.getMainLooper());
+
+            Runnable myRunnable = getRunnable();
+            mainHandler.post(myRunnable);
+        }
+
+        private Runnable getRunnable(){
+            return WearWebView.this::clearFocus;
         }
     }
 

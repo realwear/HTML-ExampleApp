@@ -38,7 +38,6 @@ class MainActivity : AppCompatActivity(){
         webView.loadUrl(myWebUrl)
     }
 
-
     override fun onKeyDown(keyCode: Int, event: KeyEvent): Boolean {
         if (event.action == KeyEvent.ACTION_DOWN) {
             when (keyCode) {
@@ -62,9 +61,8 @@ class MainActivity : AppCompatActivity(){
     }
 
     companion object {
-        private lateinit var webView: WebView
+        private lateinit var webView: WearWebView
     }
-
 }
 
 
