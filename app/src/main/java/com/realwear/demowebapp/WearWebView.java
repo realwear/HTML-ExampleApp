@@ -103,13 +103,10 @@ public class WearWebView extends WebView {
         private void handleKeyboardEvent(){
             Handler mainHandler = new Handler(Looper.getMainLooper());
 
-            Runnable myRunnable = getRunnable();
+            Runnable myRunnable = WearWebView.this::clearFocus;
             mainHandler.post(myRunnable);
         }
 
-        private Runnable getRunnable(){
-            return WearWebView.this::clearFocus;
-        }
     }
 
 }
