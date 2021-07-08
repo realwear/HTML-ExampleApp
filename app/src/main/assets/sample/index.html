@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>
+        Home - Cloud Service
+    </title>
+
+    <meta name="csrf-token" content="vgI1OoVyQtXjnGWzPWdY3d95JjguZd7ILACosLH6" />
+
+    <link rel="stylesheet" type="text/css" href="http://configure.realwear.com/vendor/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="http://configure.realwear.com/vendor/font-awesome/css/font-awesome.css" />
+
+    <script type="text/javascript" src="http://configure.realwear.com/vendor/jquery/jquery.js"></script>
+    <script type="text/javascript" src="http://configure.realwear.com/vendor/bootstrap/dist/js/bootstrap.js"></script>
+    <script type="text/javascript" src="http://configure.realwear.com/vendor/awesomplete/awesomplete.js"></script>
+
+    <script type="text/javascript" src="http://configure.realwear.com/v/1500378625/vendor/autocomplete/autocomplete.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="http://configure.realwear.com/v/1500378625/vendor/awesomplete/awesomplete.css" />
+
+    <script type="text/javascript">
+            var Laravel = {"csrfToken":"vgI1OoVyQtXjnGWzPWdY3d95JjguZd7ILACosLH6"}
+        </script>
+</head>
+
+<body id="p_test_signup">
+<div id="app">
+    <div id="container" class="container">
+        <div class="row">
+            <div class="col-sm-offset-2 col-sm-6">
+                <h2>RealWear Signup Form</h2>
+                <p>Note: This form is a test, it does not record any information. TESTING ONLY!!</p>
+                <form>
+                    <div class="form-group">
+                        <p><b>Please enter your name</b></p>
+                        <input type="text"
+                               class="form-control"
+                               id="input"
+                               title="hf_no_number|hf_show_text|hf_use_description|username"/>
+                    </div>
+                    <div class="form-group">
+                        <p><b>Please enter your Age</b></p>
+                        <input type="text"
+                               class="form-control"
+                               placeholder="Enter Age"
+                               title="hf_no_number|hf_show_text|hf_use_description|hf_text_dictation"/>
+                    </div>
+                    <p><i>Select one or more from list</i></p>
+                    <div class="form-group">
+                        <input name="checkbox1"
+                               type="checkbox"
+                               id="checkbox1"
+                               title="hf_make_clickable|hf_no_number|hf_use_description|Ice Cream"/>
+                        <label for="checkbox1" >Ice Cream</label>
+
+                        <input name="checkbox2"
+                               type="checkbox"
+                               id="checkbox2"
+                               title="hf_make_clickable|hf_show_text|hf_no_number|hf_use_description|Popcorn"/>
+                        <label for="checkbox2">Popcorn</label>
+
+                        <input name="checkbox3"
+                               type="checkbox"
+                               id="checkbox3"
+                               title="hf_make_clickable|hf_show_text|hf_use_description|Chocolates"/>
+                        <label  for="checkbox3">Chocolates</label>
+                    </div>
+                    <p>What is your fav colour? <br/>
+                        <i>Select one or more snacks from the list</i></p>
+                    <div class="form-group">
+                        <label>
+                            <input type="radio" name="radio1" checked id="None" />
+                            None
+                        </label>
+                        <label>
+                            <input type="radio" name="radio2" id="red" />
+                            Red-ish
+                        </label>
+                        <label>
+                            <input type="radio" name="radio3" id="Blue" />
+                            Blue
+                        </label>
+                        <label>
+                            <input type="radio" name="radio4" id="green" />
+                            Green
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <p>What do you like doing?</p>
+                        <select class="form-control" >
+                            <option selected >Select Item</option>
+                            <option >Sleeping</option>
+                            <option >Eating</option>
+                            <option >Programming</option>
+                            <option>Eating, Sleeping and Programming</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <p>Tell me what your best experience in life is</p>
+                        <textarea class="form-control" rows="5" placeholder="Enter Experiences"
+                                  title="hf_no_number|hf_use_description|hf_text_dictation"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button
+                                type="submit"
+                                title="hf_no_number|Submit">
+                            Submit Form
+                        </button>
+                        <button
+                                id="clearForm"
+                                title="hf_persists|hf_no_number|hf_show_text">
+                            Clear Form
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" tabindex="-1" id="dialog" title="hf_no_number">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title"></div>
+            </div>
+            <div class="modal-body"></div>
+            <div class="modal-footer" >
+                <button type="button" class="btn btn-default" data-dismiss="modal" title="hf_no_number">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="http://configure.realwear.com/v/1482881529/js/common.js"></script>
+
+</body>
+</html>
