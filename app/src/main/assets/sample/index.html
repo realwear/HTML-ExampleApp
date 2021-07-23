@@ -33,6 +33,7 @@
                 <h2>RealWear Signup Form</h2>
                 <p>Note: This form is a test, it does not record any information. TESTING ONLY!!</p>
                 <form>
+                    <!-- The following two items take advantage of the placeholder attribute -->
                     <div class="form-group">
                         <p><b>Please enter your name</b></p>
                         <input type="text"
@@ -47,6 +48,8 @@
                                placeholder="Enter Age"
                                title="hf_no_number|hf_show_text|hf_use_description"/>
                     </div>
+                    <!-- Below is demonstrating the extra command necessary on checkbox buttons to
+                    make them clickable -->
                     <p><i>Select one or more from list</i></p>
                     <div class="form-group">
                         <input name="checkbox1"
@@ -67,6 +70,8 @@
                                title="hf_make_clickable|hf_show_text|hf_use_description|Chocolates"/>
                         <label  for="checkbox3">Chocolates</label>
                     </div>
+
+                    <!-- Don't forget that these elements are not un-selectable and need a manuel reset-->
                     <p>What is your fav colour? <br/>
                         <i>Select one or more snacks from the list</i></p>
                     <div class="form-group">
@@ -120,7 +125,12 @@
     </div>
 </div>
 
-<div class="modal fade" tabindex="-1" id="dialog" title="hf_no_number">
+<!-- This div element here is an example of how to enable the title attribute when our speech index
+does not recognize that the element is interactable. The tabindex attribute enables our speech
+engine to respect non-traditional interactive elements and enables the inheritance property of the
+hf_no_number directive, whereby all child elements of this tag will not be given number selection
+bubble by default -->
+<div tabindex="-1" title="hf_no_number">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
