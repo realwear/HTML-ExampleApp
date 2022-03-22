@@ -6,26 +6,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    >
+    android:contentDescription="hf_no_number">
 
     <com.realwear.demowebapp.WearWebView
         android:id="@+id/wearwebview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-    </com.realwear.demowebapp.WearWebView>
+        android:layout_height="match_parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
-
-
-
-
-
-
-
-
-
-
